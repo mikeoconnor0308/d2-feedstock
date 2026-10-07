@@ -22,6 +22,9 @@ source:
   - url: https://github.com/dop251/goja/raw/refs/heads/master/ftoa/LICENSE_LUCENE
     sha256: eb4df27f95a096a23d88e567331a4bee5590d22185942a1b0456197e29d03e59
     file_name: goja-ftoa-license.txt
+  - url: https://raw.githubusercontent.com/alecthomas/chroma/v2.27.0/COPYING
+    sha256: 13654b052f885cb3fa47d7343e13975d9c8a64c3bcd84993c35d5eb01f22b23f
+    file_name: chroma-license.txt
 
 build:
   number: 0
@@ -35,11 +38,13 @@ requirements:
 tests:
   - script:
       - d2 --help
+      - d2 layout tala
+      - d2 layout elk
 
 about:
   homepage: https://github.com/terrastruct/d2
   summary: D2 is a modern diagram scripting language that turns text to diagrams.
-  license: MPL-2.0 AND (GPL-2.0-or-later OR LicenseRef-FreeType)
+  license: MPL-2.0 AND EPL-2.0 AND Apache-2.0 AND BSD-3-Clause AND MIT AND (GPL-2.0-or-later OR LicenseRef-FreeType)
   license_file:
     - src/LICENSE.txt
     - library_licenses/
@@ -47,6 +52,8 @@ about:
     - freetype-license-ftl.txt
     - freetype-license-gpl.txt
     - goja-ftoa-license.txt
+    - chroma-license.txt
+    - src/d2layouts/d2elklayout/NOTICE.txt
 
 extra:
   recipe-maintainers:
